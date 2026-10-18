@@ -3,27 +3,37 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Claudio Seguel | En Construcción</title>
+  <title>Claudio Seguel | Ingeniero en Informática</title>
   <!-- Bootstrap 5 CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- Bootstrap Icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
   <style>
     body {
-      background: linear-gradient(135deg, #1e1e2f 0%, #0f0f17 100%);
-      color: #e0e0e0;
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      color: #e2e8f0;
       min-height: 100vh;
       display: flex;
       align-items: center;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     }
     .card-custom {
-      background: rgba(255, 255, 255, 0.05);
+      background: rgba(30, 41, 59, 0.7);
       border: 1px solid rgba(255, 255, 255, 0.1);
-      backdrop-filter: blur(10px);
-      border-radius: 16px;
+      backdrop-filter: blur(12px);
+      border-radius: 20px;
+    }
+    .project-card {
+      background: rgba(15, 23, 42, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+    .project-card:hover {
+      transform: translateY(-3px);
+      border-color: rgba(56, 189, 248, 0.4);
     }
     .btn-outline-light:hover {
-      color: #0f0f17;
+      color: #0f172a;
     }
   </style>
 </head>
@@ -31,61 +41,122 @@
 
   <div class="container py-5">
     <div class="row justify-content-center">
-      <div class="col-lg-8 text-center">
+      <div class="col-lg-10 col-xl-9 text-center">
         
         <!-- Tarjeta Principal -->
         <div class="card card-custom p-4 p-md-5 shadow-lg">
           
           <div class="mb-3">
-            <span class="badge bg-warning text-dark px-3 py-2 rounded-pill fs-6">
-              <i class="bi bi-cone-striped me-1"></i> Sitio Web en Proceso
+            <span class="badge bg-warning text-dark px-3 py-2 rounded-pill fs-6 fw-semibold">
+              <i class="bi bi-cone-striped me-1"></i> Sitio Web en Rediseño
             </span>
           </div>
 
-          <h1 class="display-5 fw-bold text-white mb-3">¡Hola! Soy Claudio Seguel</h1>
-          <p class="lead text-light mb-4">
-            Ingeniero en Informática y Desarrollador Full-Stack. Estoy rediseñando y actualizando este sitio web para mostrar mis últimos proyectos y trabajos.
+          <h1 class="display-5 fw-bold text-white mb-2">Claudio Seguel Abarzúa</h1>
+          <p class="fs-5 text-info mb-3">Ingeniero en Informática & Desarrollador Full-Stack</p>
+          <p class="lead text-light text-opacity-75 mb-4 mx-auto" style="max-width: 700px;">
+            Especializado en arquitectura de software, gestión de datos, automatización e integración de sistemas web para comunidades, educación e instituciones.
           </p>
 
-          <hr class="border-secondary my-4">
+          <hr class="border-secondary border-opacity-50 my-4">
 
           <!-- Proyectos Destacados -->
-          <h2 class="h4 text-white mb-3">Proyectos Destacados</h2>
+          <h2 class="h4 text-white mb-4"><i class="bi bi-code-slash me-2 text-info"></i>Proyectos y Desarrollos</h2>
           
           <div class="row g-3 mb-4 text-start">
             
+            <!-- AutoLote.cl -->
             <div class="col-md-6">
-              <div class="p-3 border border-secondary border-opacity-50 rounded bg-dark bg-opacity-50 h-100">
-                <h3 class="h5 text-info mb-1"><i class="bi bi-car-front me-2"></i>AutoLote</h3>
-                <p class="small text-secondary mb-2">Plataforma de control de acceso vehicular, gestión de estacionamientos y boletería digital.</p>
-                <a href="https://autolote.cl" target="_blank" class="btn btn-sm btn-outline-info">Visitar autolote.cl</a>
+              <div class="p-4 rounded-4 project-card h-100 d-flex flex-column justify-content-between">
+                <div>
+                  <div class="d-flex justify-content-between align-items-center mb-2">
+                    <h3 class="h5 text-info mb-0"><i class="bi bi-shield-lock me-2"></i>AutoLote.cl</h3>
+                    <span class="badge bg-info text-dark">SaaS / Producción</span>
+                  </div>
+                  <p class="small text-secondary mb-3">
+                    Plataforma web para el control de accesos vehiculares/peatonales, administración de condominios, recintos comerciales, ticketing digital y eventos en tiempo real.
+                  </p>
+                </div>
+                <div>
+                  <a href="https://autolote.cl" target="_blank" class="btn btn-sm btn-outline-info w-100">
+                    Visitar autolote.cl <i class="bi bi-arrow-up-right ms-1"></i>
+                  </a>
+                </div>
               </div>
             </div>
 
+            <!-- Cuadrate.cl -->
             <div class="col-md-6">
-              <div class="p-3 border border-secondary border-opacity-50 rounded bg-dark bg-opacity-50 h-100">
-                <h3 class="h5 text-warning mb-1"><i class="bi bi-activity me-2"></i>Laboratorio Sísmico</h3>
-                <p class="small text-secondary mb-2">Visualización interactiva y laboratorio de datos sísmicos históricos de Chile.</p>
-                <span class="badge bg-secondary">Proyecto Personal</span>
+              <div class="p-4 rounded-4 project-card h-100 d-flex flex-column justify-content-between">
+                <div>
+                  <div class="d-flex justify-content-between align-items-center mb-2">
+                    <h3 class="h5 text-success mb-0"><i class="bi bi-wallet2 me-2"></i>Cuadrate.cl</h3>
+                    <span class="badge bg-success text-dark">Sin fines de lucro</span>
+                  </div>
+                  <p class="small text-secondary mb-3">
+                    Herramienta web de finanzas personales enfocada en el control presupuestario, gestión de gastos mensuales y hábitos de ahorro para la comunidad.
+                  </p>
+                </div>
+                <div>
+                  <a href="https://cuadrate.cl" target="_blank" class="btn btn-sm btn-outline-success w-100">
+                    Visitar cuadrate.cl <i class="bi bi-arrow-up-right ms-1"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Módulo A+S CFT Maule -->
+            <div class="col-md-6">
+              <div class="p-4 rounded-4 project-card h-100 d-flex flex-column justify-content-between">
+                <div>
+                  <div class="d-flex justify-content-between align-items-center mb-2">
+                    <h3 class="h5 text-warning mb-0"><i class="bi bi-journal-bookmark me-2"></i>Módulo A+S (VCM)</h3>
+                    <span class="badge bg-secondary">Educación Superior</span>
+                  </div>
+                  <p class="small text-secondary mb-3">
+                    Módulo de software para la gestión de Aprendizaje Plus Servicio integrado al sistema institucional U+ del CFT Estatal del Maule.
+                  </p>
+                </div>
+                <div>
+                  <span class="badge bg-dark border border-secondary text-secondary">Desarrollo Institucional</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Laboratorio Sísmico -->
+            <div class="col-md-6">
+              <div class="p-4 rounded-4 project-card h-100 d-flex flex-column justify-content-between">
+                <div>
+                  <div class="d-flex justify-content-between align-items-center mb-2">
+                    <h3 class="h5 text-primary-emphasis mb-0"><i class="bi bi-activity me-2"></i>Laboratorio Sísmico</h3>
+                    <span class="badge bg-primary bg-opacity-25 text-primary border border-primary">Data Analytics</span>
+                  </div>
+                  <p class="small text-secondary mb-3">
+                    Visualización interactiva, filtrado y análisis de datos sísmicos históricos de Chile mediante procesamiento de datasets.
+                  </p>
+                </div>
+                <div>
+                  <span class="badge bg-dark border border-secondary text-secondary">Proyecto de Datos</span>
+                </div>
               </div>
             </div>
 
           </div>
 
           <!-- Contacto / Enlaces -->
-          <div class="d-flex justify-content-center gap-3 flex-wrap">
-            <a href="https://github.com/ekos77" target="_blank" class="btn btn-outline-light">
-              <i class="bi bi-github me-1"></i> GitHub
+          <div class="d-flex justify-content-center gap-3 flex-wrap pt-2">
+            <a href="https://github.com/ekos77" target="_blank" class="btn btn-outline-light px-4">
+              <i class="bi bi-github me-2"></i>GitHub
             </a>
-            <a href="https://www.linkedin.com" target="_blank" class="btn btn-primary">
-              <i class="bi bi-linkedin me-1"></i> LinkedIn
+            <a href="https://www.linkedin.com" target="_blank" class="btn btn-primary px-4">
+              <i class="bi bi-linkedin me-2"></i>LinkedIn
             </a>
           </div>
 
         </div>
 
         <p class="text-secondary small mt-4">
-          &copy; Claudio Seguel — Alojado en GitHub Pages
+          &copy; Claudio Seguel Abarzúa — Longaví, Región del Maule, Chile
         </p>
 
       </div>
